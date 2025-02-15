@@ -1,18 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import App from "./App";
+// import StarRatings from "./StarRatings";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
-    {/* <StarRating
-      maxRating={5}
-      messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
-    />
-    <StarRating size={24} color="red" className="test" defaultRating={2} />
-
-    <Test /> */}
-  </React.StrictMode>
+  </StrictMode>
 );
